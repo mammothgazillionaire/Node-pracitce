@@ -15,7 +15,7 @@
 //     response.statusCode = 404;
 //     response.end();
 //   }
-// }).listen(8000);
+// }).listen(9000, () => console.log('server is running'));
 
 
 
@@ -24,16 +24,16 @@
 
 // Stream magic - Not for now.
 
-const http = require('http');
+// const http = require('http');
 
-http.createServer((request, response) => {
-  if (request.method === 'POST' && request.url === '/echo') {0   
-    request.pipe(response);
-  } else {
-    response.statusCode = 404;
-    response.end();
-  }
-}).listen(8000);
+// http.createServer((request, response) => {
+//   if (request.method === 'POST' && request.url === '/echo') {0   
+//     request.pipe(response);
+//   } else {
+//     response.statusCode = 404;
+//     response.end();
+//   }
+// }).listen(9000, () => console.log('server is running'));
 
 
 

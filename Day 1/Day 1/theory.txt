@@ -22,7 +22,7 @@ What is NodeJS?
 * run time environment for js that runs on server
 * built on google V8 JS engine - same as chrome
 * Difference between browser and node
-* Node REPL
+* Node REPL(read,,print,loop)
 * Environment vars, argvs
 * CommonJS module
 * Browser vs Node

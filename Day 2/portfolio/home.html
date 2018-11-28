@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Flavors" rel="stylesheet">
+  <title>homepage</title>
+  <style>
+    
+    *
+    ,body
+    ,html
+    {
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      color: whitesmoke;
+      font-family: sans-serif;
+    }
+    .contianer {
+      max-width: 1880px;
+    }
+    .wrapper {
+      margin: 0 auto;
+      text-align: center;
+      height: 100vh;
+      background: darkslateblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-logo{
+      font-size: 8rem;
+      padding: 2rem;
+      font-weight: bold;
+      box-shadow: 2px -2px 15px 5px rgba(0,0,0,.8);
+      text-shadow: 4px 4px 1px #ffffff,-4px -4px 1px #ffffff,-4px 4px 1px #ffffff,4px -4px 1px #ffffff;
+      letter-spacing: 2px;
+      font-family: 'Love Ya Like A Sister', cursive;
+    }
+    .nav{
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      top: 2%;
+      right:5%;
+    }
+    li{
+        list-style: none;
+        padding: 1rem;
+      }
+    .nav-links{
+      font-family: 'Flavors', cursive;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+    }
+    .underbar{
+      width: 0;
+      height: 5px;
+      background: rgba(100, 100, 200, 0);
+      transition: 0.5s ease;
+      position: absolute;
+      top:80%;
+      right: 78%;
+    }
+    li:nth-of-type(1):hover ~ .underbar {
+      right: 78%;
+      width: 3.2rem;
+      background: #7878ac;
+    }
+    li:nth-of-type(2):hover ~ .underbar {
+      right: 50%;
+      width: 3.2rem;
+      background: #c86464;
+    }
+    li:nth-of-type(3):hover ~ .underbar {
+      right: 12%;
+      width: 4.5rem;
+      height: 1px;
+      background: rgba(214, 191, 202, 0.5);
+      box-shadow: 0 0 10px #236d6d;
+    }
+    .about {
+      font-size: 2rem;
+    }
+    .letter-big{
+      font-size: 4rem;
+      margin-left: -1.5rem;
+    }
+    .icons{
+      display: flex;
+      background: rgba(119, 136, 153,.6);
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 50px;
+      position: absolute;
+      left: 90%;
+    }
+    a{
+      text-decoration: none;
+    }
+    .fab{
+      font-size:1.5rem;
+      padding: 1rem;
+    }
+    i:hover {
+      color:black;
+    }
+  </style>
+</head>
+<body class="container">
+  <div class="wrapper">
+    <nav>
+      <ul class="nav">
+        <h1></h1>
+        <li class="nav-items"><a href="" class="nav-links">Home</a></li>
+        <li class="nav-items"><a href="" class="nav-links">About</a></li>
+        <li class="nav-items"><a href="" class="nav-links">Projects</a></li>
+        <div class="underbar"></div>
+      </ul>
+    </nav>
+    <div>
+      <p class="hero-logo">404</p>
+    </div>
+    <div class="main">
+      <p class="about"><span class="letter-big">Hi</span> this is my portfolio</p>
+    </div>
+    <div class="icons">
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-linkedin-in"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</body>
+</html>

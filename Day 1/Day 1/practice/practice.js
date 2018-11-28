@@ -15,4 +15,3 @@
 //   console.log(`port is created http://${hostname}:${port}`);
 // })
 
-npm.init();
