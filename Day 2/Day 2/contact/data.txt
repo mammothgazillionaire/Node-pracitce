@@ -1,4 +1,1 @@
-
-          Name = mammothgazillionaire
-          Email = mammothgazillionaire@gmail.com
-        
+ {"name":"praveen","email":"praveen-me@gmail.com"}  {"name":"ashwani","email":"ashwanig3@gmail.com"} 
