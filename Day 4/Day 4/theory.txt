@@ -1,0 +1,57 @@
+- MongoDB
+  - NoSQL 
+- Drivers
+- Mongo shell, server
+- Properties
+  - have databases
+    - can have collections
+      - can have documents
+        - can have fields
+  - Indexes, improves lookup and sorting
+  - Cursor
+- Shell
+  - db.version(), db.stats(), db.help()
+  - show dbs, collections
+  - use
+  - db.getCollectionNames()
+  - db.COLLECTION_NAME.count()
+  - db.COLLECTION_NAME.insert({name: '', description: ''})
+  - db.COLLECTION_NAME.find()
+  - db.COLLECTION_NAME.remove({})
+  - fields, _id ObjectId
+  - db.COLLECTION_NAME.getIndexes()
+  - selectors
+    - db.COLLECTION_NAME.find({gender: 'm', weight: {$gt: 700}}) // $gt, $lt, $lte, $gte, $ne, $exists, $in (match one of the many), $or,
+  - db.COLLECTION_NAME.update({}, {}) - two params, 
+    - $set is important
+    - $inc, $push, $pop
+    - third param, 
+      - {upsert:true}, An upsert updates the document if found or inserts it if not,
+      - {multi:true}
+
+  == Cursors ===
+  - find takes a second optional parameter called “projection”
+    - db.COLLECTION_NAME.find({}, {name: 1});
+    - find returns a cursor whose execution is delayed until needed
+    - db.COLLECTION_NAME.find().sort({weight: -1})
+      - .limit, .skip, .count
+
+  - Modelling data 
+    - refrences
+    - arrays as first class citizens
+    - embedded docs and dot notation 
+      - db.users.find({'family.mother': 'SomeName'})
+    - Normalisation vs Denormalisation
+    - Embedding vs Joining(Manual references)
+
+  - Full text search
+  - Transactions
+    - findAndModify, 
+    - Two phase commit - https://docs.mongodb.com/manual/core/transactions/
+
+  - GeoSpatial
+
+  - Aggregation framework
+    - Group by
+    - db.COLLECTION_NAME.aggregate([{$group:{_id:'$gender', total: {$sum:1}}}])
+
