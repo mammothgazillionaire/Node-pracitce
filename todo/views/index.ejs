@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *,body,html{
+      margin: 0 auto;
+      text-align: center;
+    }
+  li{
+    margin: .1rem auto;
+    box-shadow: -1px -1px 3px 2px rgba(0,0,0.5);
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+    width: 28%;
+    text-align: left;
+    font-weight: 900;
+    background: rgb(166, 173, 150);  
+  }
+  a{
+    text-decoration: none;  
+  }
+  .add__todo,.description_todo{
+    width: 25%;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: left;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    transition: all 0.5s;
+    font-size: 1.6rem;
+  }
+  .add__todo:focus,
+  .description_todo:focus{
+    font-size: .9rem;
+  }
+  .submit__btn{
+    font-size: 1.2rem;
+    width: 15%;
+    padding: 1rem;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .submit__btn:hover{
+    color: white;
+    background: darkturquoise;
+  }
+  </style>
+</head>
+<body>
+  <form action="/" method="POST" class="flexed">
+    <input type="text" name="todo" class="add__todo" placeholder="ADD TASKS" /><br/>
+    <input type="text" name="description" class="description_todo" placeholder="DESCRIPTION"/><br/>
+    <input type="submit" value="Add Todo" class="submit__btn">
+  </form>
+  <div>
+    <ul>
+      <% todos.forEach(function(value) { %>
+          <li class="show__todo">
+            <a href=<%='/todos/'+ value.id%>>
+              <%= value.todo %>
+            </a>
+          </li>
+      <% }); %>
+  </ul>
+  </div>
+</body>
+</html>

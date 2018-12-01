@@ -45,6 +45,14 @@ app.post('/contact', (req,res) => {
     res.send("<h1>submmited</h1>");
   })
 
+  app.get("/contacts/:id", (req,res) => {
+    fs.readFile('./data.json', (err,data) =>{
+      if(err) throw err;
+       data = JSON.parse(data);
+      console.log(data)
+       res.render('contacts',{value: data.contacts[req.params.id]});
+    })
+  })
 
 
 app.listen(port, () => console.log(`listening on port ${port}`));
