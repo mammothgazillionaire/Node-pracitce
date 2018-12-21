@@ -115,7 +115,7 @@ app.get("/todos/:id/edit",(req, res) => {
 app.put(("/todos/:id"),(req, res) => {
   const id = req.params.id;
   let data = req.body;
-  Todo.updateOne({ _id: id },{$set : {...data}},(err,data) =>{
+  Todo.updateOne({ _id: id },{$set : {...data}},(err,data) => {
     if(err) throw err;
     res.redirect('/');
   })

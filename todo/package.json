@@ -13,5 +13,10 @@
     "ejs": "^2.6.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.3.14"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   }
 }
