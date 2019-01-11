@@ -5,8 +5,8 @@ const fs = require("fs");
 const mongoose = require( 'mongoose' );
 const bodyParser = require('body-parser');
 const path = require('path');
-const methodOverride = require('./methodOverride')();
-// const methodOverride = require('method-override');
+// const methodOverride = require('./methodOverride')();
+const methodOverride = require('method-override');
 
 mongoose.connect( 'mongodb://localhost/todo', (err,connection) => {
   if(err) throw err;
